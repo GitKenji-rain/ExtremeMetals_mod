@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "extrememetals:block/primitive_steam_boiler_idle",
+    "side": "extrememetals:block/primitive_side",
+    "top": "extrememetals:block/primitive_top"
+  }
+}

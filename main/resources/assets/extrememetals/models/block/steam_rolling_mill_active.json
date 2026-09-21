@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "extrememetals:block/steam_rolling_mill_active",
+    "side": "extrememetals:block/steam_side",
+    "top": "extrememetals:block/steam_top"
+  }
+}

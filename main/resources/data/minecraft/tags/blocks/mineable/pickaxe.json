@@ -1,0 +1,10 @@
+{
+  "values" : [
+    "extrememetals:native_silver_ore",
+    "extrememetals:cassiterite_ore",
+    "extrememetals:sphalerite_ore",
+    "extrememetals:primitive_reduction_furnace",
+    "extrememetals:primitive_alloying_machine",
+    "extrememetals:primitive_steam_boiler"
+  ]
+}

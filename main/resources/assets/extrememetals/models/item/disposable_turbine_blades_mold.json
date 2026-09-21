@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "extrememetals:item/disposable_turbine_blades_mold"
+  }
+}
