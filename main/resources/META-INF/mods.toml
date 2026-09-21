@@ -8,11 +8,22 @@ modId="extrememetals"
 version="1.30.62-legacy"
 displayName="Extreme Metals"
 authors="surubedai"
+<<<<<<< HEAD
 description='''add some metals and machines'''
 
 [[dependencies.extrememetals]]
     modId="forge"
     mandatory=true
+=======
+
+description='''add some metals and machines'''
+
+[[dependencies.extrememetals]]
+
+    modId="forge"
+    mandatory=true
+
+>>>>>>> origin/main
     versionRange="[47.4.10,)"
     ordering="NONE"
     side="BOTH"
