@@ -1,10 +1,7 @@
 package com.surubedai.extrememetals.regi;
 
 import com.surubedai.extrememetals.ExtremeMetalsMain;
-import com.surubedai.extrememetals.screen.ScreenPrimitiveAlloyingMachine;
-import com.surubedai.extrememetals.screen.ScreenPrimitiveReductionFurnace;
-import com.surubedai.extrememetals.screen.ScreenPrimitiveSteamBoiler;
-import com.surubedai.extrememetals.screen.ScreenSteamRollingMill;
+import com.surubedai.extrememetals.screen.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -30,6 +27,9 @@ public class ExtremeMetalsAddScreens {
 
     public static final RegistryObject<MenuType<ScreenSteamRollingMill>> STEAM_ROLLING_MENU =
             registerMenuType("steam_rolling_menu", ScreenSteamRollingMill::new);
+
+    public static final RegistryObject<MenuType<ScreenSteamLathe>> STEAM_LATHE_MENU =
+            registerMenuType("steam_lathe_menu", ScreenSteamLathe::new);
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

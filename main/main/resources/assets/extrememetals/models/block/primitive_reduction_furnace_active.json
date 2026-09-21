@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "extrememetals:block/primitive_reduction_furnace_active",
-    "side": "extrememetals:block/primitive_side",
-    "top": "extrememetals:block/primitive_top"
-  }
-}

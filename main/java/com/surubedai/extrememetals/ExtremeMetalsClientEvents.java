@@ -19,6 +19,7 @@ public class ExtremeMetalsClientEvents {
             MenuScreens.register(ExtremeMetalsAddScreens.PRIMITIVE_ALLOYING_MENU.get(), ScreenPrimitiveAlloyingMachineDrawing::new);
             MenuScreens.register(ExtremeMetalsAddScreens.PRIMITIVE_BOILER_MENU.get(), ScreenPrimitiveSteamBoilerDrawing::new);
             MenuScreens.register(ExtremeMetalsAddScreens.STEAM_ROLLING_MENU.get(), ScreenSteamRollingMillDrawing::new);
+            MenuScreens.register(ExtremeMetalsAddScreens.STEAM_LATHE_MENU.get(), ScreenSteamLatheDrawing::new);
         });
     }
 

@@ -3,6 +3,7 @@ package com.surubedai.extrememetals.regi;
 import com.surubedai.extrememetals.ExtremeMetalsMain;
 import com.surubedai.extrememetals.recipe.RecipePrimitiveAlloyingMachine;
 import com.surubedai.extrememetals.recipe.RecipePrimitiveReductionFurnace;
+import com.surubedai.extrememetals.recipe.RecipeSteamLathe;
 import com.surubedai.extrememetals.recipe.RecipeSteamRollingMill;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -38,6 +39,12 @@ public class ExtremeMetalsAddRecipes {
 
     public static final RegistryObject<RecipeType<RecipeSteamRollingMill>> STEAM_ROLLING_TYPE =
             TYPES.register("steam_rolling", () -> RecipeSteamRollingMill.Type.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<RecipeSteamLathe>> STEAM_LATHE_SERIALIZER =
+            SERIALIZERS.register("steam_lathe", () -> RecipeSteamLathe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeType<RecipeSteamLathe>> STEAM_LATHE_TYPE =
+            TYPES.register("steam_lathe", () -> RecipeSteamLathe.Type.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

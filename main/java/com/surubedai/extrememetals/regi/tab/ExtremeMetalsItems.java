@@ -56,6 +56,7 @@ public class ExtremeMetalsItems {
             ExtremeMetalsAddBlocks.BlockItems.PRIMITIVE_STEAM_BOILER.get(),
 
             ExtremeMetalsAddBlocks.BlockItems.STEAM_ROLLING_MILL.get(),
+            ExtremeMetalsAddBlocks.BlockItems.STEAM_LATHE.get(),
 
             ExtremeMetalsAddFluids.BucketItems.STEAM_BUCKET.get()
     }; //items

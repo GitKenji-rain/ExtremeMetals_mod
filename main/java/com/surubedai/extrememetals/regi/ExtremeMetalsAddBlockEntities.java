@@ -1,10 +1,7 @@
 package com.surubedai.extrememetals.regi; // ご自身の環境に合わせて書き換えてください
 
 import com.surubedai.extrememetals.ExtremeMetalsMain;
-import com.surubedai.extrememetals.blockentity.BlockentityPrimitiveAlloyingMachine;
-import com.surubedai.extrememetals.blockentity.BlockentityPrimitiveReductionFurnace;
-import com.surubedai.extrememetals.blockentity.BlockentityPrimitiveSteamBoiler;
-import com.surubedai.extrememetals.blockentity.BlockentitySteamRollingMill;
+import com.surubedai.extrememetals.blockentity.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,6 +33,11 @@ public class ExtremeMetalsAddBlockEntities {
             BLOCK_ENTITIES.register("steam_rolling_mill", () ->
                     BlockEntityType.Builder.of(BlockentitySteamRollingMill::new,
                             ExtremeMetalsAddBlocks.Blocks.STEAM_ROLLING_MILL.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<BlockentitySteamLathe>> STEAM_LATHE =
+            BLOCK_ENTITIES.register("steam_lathe", () ->
+                    BlockEntityType.Builder.of(BlockentitySteamLathe::new,
+                            ExtremeMetalsAddBlocks.Blocks.STEAM_LATHE.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

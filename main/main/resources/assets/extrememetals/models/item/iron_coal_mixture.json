@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "extrememetals:item/iron_coal_mixture"
-  }
-}

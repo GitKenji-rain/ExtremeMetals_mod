@@ -3,6 +3,7 @@ package com.surubedai.extrememetals.datagen;
 import com.surubedai.extrememetals.ExtremeMetalsMain;
 import com.surubedai.extrememetals.recipe.RecipebuilderPrimitiveAlloyingMachine;
 import com.surubedai.extrememetals.recipe.RecipebuilderPrimitiveReductionFurnace;
+import com.surubedai.extrememetals.recipe.RecipebuilderSteamLathe;
 import com.surubedai.extrememetals.recipe.RecipebuilderSteamRollingMill;
 import com.surubedai.extrememetals.regi.ExtremeMetalsAddBlocks;
 import com.surubedai.extrememetals.regi.ExtremeMetalsAddItems;
@@ -155,7 +156,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/unshaped_turbine_blades/brass")
         );
 
-        //shaped crafting (machines)
+        //shaped crafting (primitive machines)
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ExtremeMetalsAddBlocks.BlockItems.PRIMITIVE_REDUCTION_FURNACE.get(),1) // 完成品
             .pattern("PSP")
             .pattern("SBS")
@@ -180,7 +181,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/primitive/alloying_machine")
         );
 
-
+        //shaped crafting (steam machines)
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ExtremeMetalsAddBlocks.BlockItems.STEAM_ROLLING_MILL.get(),1) // 完成品
             .pattern("PGI")
             .pattern("PGB")
@@ -301,7 +302,17 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "rollingmill/steam/iron_ingot")
         );
 
+        //steam lathe
+        RecipebuilderSteamLathe.create(
+            Ingredient.of(Items.IRON_INGOT),
+            ExtremeMetalsAddItems.IRON_ROD.get(),
+            1
+        )
+            .unlockedBy("has_iron", has(Items.IRON_INGOT))
+            .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "lathe/steam/iron_ingot")
+        );
 
+        //smithing
         SmithingTransformRecipeBuilder.smithing(
             Ingredient.of(ExtremeMetalsAddItems.DISPOSABLE_PLATE_MOLD.get()),
             Ingredient.of(Items.IRON_INGOT),
