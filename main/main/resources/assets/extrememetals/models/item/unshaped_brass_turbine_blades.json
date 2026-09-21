@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "extrememetals:item/unshaped_brass_turbine_blades"
+  }
+}
