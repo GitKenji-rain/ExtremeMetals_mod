@@ -22,7 +22,8 @@ description='''add some metals and machines'''
     versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
-[[dependencies.extrememetals]]
+
+    [[dependencies.extrememetals]]
     modId="jei"
     mandatory=false
     versionRange="[15.2.0.20,)"
