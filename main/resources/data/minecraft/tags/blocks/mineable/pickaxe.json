@@ -5,6 +5,8 @@
     "extrememetals:sphalerite_ore",
     "extrememetals:primitive_reduction_furnace",
     "extrememetals:primitive_alloying_machine",
-    "extrememetals:primitive_steam_boiler"
+    "extrememetals:primitive_steam_boiler",
+    "extrememetals:steam_rolling_mill",
+    "extrememetals:steam_lathe"
   ]
 }

@@ -1,32 +1,31 @@
-modLoader="forge"
+modLoader="javafml"
 loaderVersion="[47,)"
-#https://choosealicense.com/
 license='MIT'
 
 [[mods]]
 modId="extrememetals"
 version="1.30.62-legacy"
 displayName="Extreme Metals"
-authors="surubedai"
+authors="Surubedai"
 description='''add some metals and machines'''
 
 [[dependencies.extrememetals]]
     modId="forge"
     mandatory=true
-    versionRange="[47.4.10,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.extrememetals]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.20.1]"
+    versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 
-    [[dependencies.extrememetals]]
+[[dependencies.extrememetals]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.extrememetals]]
     modId="jei"
     mandatory=false
     versionRange="[15.2.0.20,)"
     ordering="AFTER"
     side="BOTH"
-
