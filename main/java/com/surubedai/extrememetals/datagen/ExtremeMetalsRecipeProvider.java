@@ -11,6 +11,9 @@ import com.surubedai.extrememetals.regi.ExtremeMetalsAddItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
@@ -23,11 +26,38 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
         super(output);
     }
 
+    //tags
+    //ingots
+    TagKey<Item> tinIngotTag = ItemTags.create(new ResourceLocation("forge", "ingots/tin"));
+    TagKey<Item> zincIngotTag = ItemTags.create(new ResourceLocation("forge", "ingots/zinc"));
+    TagKey<Item> silverIngotTag = ItemTags.create(new ResourceLocation("forge", "ingots/silver"));
+    TagKey<Item> brassIngotTag = ItemTags.create(new ResourceLocation("forge", "ingots/brass"));
+    TagKey<Item> bronzeIngotTag = ItemTags.create(new ResourceLocation("forge", "ingots/bronze"));
+
+    //plates
+    TagKey<Item> ironPlateTag = ItemTags.create(new ResourceLocation("forge", "plates/iron"));
+    TagKey<Item> brassPlateTag = ItemTags.create(new ResourceLocation("forge", "plates/brass"));
+    TagKey<Item> bronzePlateTag = ItemTags.create(new ResourceLocation("forge", "plates/bronze"));
+
+    //raw materials
+    TagKey<Item> native_sliverRaw_materialTag = ItemTags.create(new ResourceLocation("forge", "raw_materials/native_silver"));
+    TagKey<Item> cassiteriteRaw_materialTag = ItemTags.create(new ResourceLocation("forge", "raw_materials/cassiterite"));
+    TagKey<Item> sphaleriteRaw_materialTag = ItemTags.create(new ResourceLocation("forge", "raw_materials/sphalerite"));
+
+    //rods
+    TagKey<Item> ironRodTag = ItemTags.create(new ResourceLocation("forge", "rods/iron"));
+
+    //turbine_blades
+    TagKey<Item> brassTurbine_bladesTag = ItemTags.create(new ResourceLocation("forge", "turbine_blades/brass"));
+
+    //gears
+    TagKey<Item> brassGearTag = ItemTags.create(new ResourceLocation("forge", "gears/brass"));
+
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         // smelting
         SimpleCookingRecipeBuilder.smelting(
-                Ingredient.of(ExtremeMetalsAddItems.RAW_NATIVE_SILVER.get()),
+                Ingredient.of(native_sliverRaw_materialTag),
                 RecipeCategory.MISC,
                 ExtremeMetalsAddItems.SILVER_INGOT.get(),
                 0.1F,
@@ -38,7 +68,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
         );
 
         SimpleCookingRecipeBuilder.smelting(
-                Ingredient.of(ExtremeMetalsAddItems.RAW_SPHALERITE.get()),
+                Ingredient.of(sphaleriteRaw_materialTag),
                 RecipeCategory.MISC,
                 ExtremeMetalsAddItems.ZINC_OXIDE.get(),
                 0.1F,
@@ -104,37 +134,38 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
         );
 
         //shapeless crafting
+        //coal mixture
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ExtremeMetalsAddItems.IRON_COAL_MIXTURE.get() , 1)
             .requires(Items.COAL)
-            .requires(Items.RAW_IRON, 8)
+            .requires(Ingredient.of(Tags.Items.RAW_MATERIALS_IRON), 8)
             .unlockedBy("has_raw_iron", has(Items.RAW_IRON))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shapeless/iron_coal_mixture")
         );
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ExtremeMetalsAddItems.COPPER_COAL_MIXTURE.get() , 1)
             .requires(Items.COAL)
-            .requires(Items.RAW_COPPER, 8)
+            .requires(Ingredient.of(Tags.Items.RAW_MATERIALS_COPPER), 8)
             .unlockedBy("has_raw_copper", has(Items.RAW_COPPER))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shapeless/copper_coal_mixture")
         );
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ExtremeMetalsAddItems.GOLD_COAL_MIXTURE.get() , 1)
             .requires(Items.COAL)
-            .requires(Items.RAW_GOLD, 8)
+            .requires(Ingredient.of(Tags.Items.RAW_MATERIALS_GOLD), 8)
             .unlockedBy("has_raw_gold", has(Items.RAW_GOLD))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shapeless/gold_coal_mixture")
         );
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ExtremeMetalsAddItems.NATIVE_SILVER_COAL_MIXTURE.get() , 1)
             .requires(Items.COAL)
-            .requires(ExtremeMetalsAddItems.RAW_NATIVE_SILVER.get(), 8)
+            .requires(Ingredient.of(native_sliverRaw_materialTag), 8)
             .unlockedBy("has_raw_nativesilver", has(ExtremeMetalsAddItems.RAW_NATIVE_SILVER.get()))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shapeless/nativesilver_coal_mixture")
         );
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ExtremeMetalsAddItems.CASSITERITE_COAL_MIXTURE.get() , 1)
             .requires(Items.COAL)
-            .requires(ExtremeMetalsAddItems.RAW_CASSITERITE.get(), 8)
+            .requires(Ingredient.of(cassiteriteRaw_materialTag), 8)
             .unlockedBy("has_raw_cassiterite", has(ExtremeMetalsAddItems.RAW_CASSITERITE.get()))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shapeless/cassiterite_coal_mixture")
         );
@@ -151,7 +182,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern(" P ")
             .pattern("PPP")
             .pattern(" P ")
-            .define('P', ExtremeMetalsAddItems.BRASS_PLATE.get())
+            .define('P', Ingredient.of(brassPlateTag))
             .unlockedBy("has_brass", has(ExtremeMetalsAddItems.BRASS_INGOT.get()))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/unshaped_turbine_blades/brass")
         );
@@ -162,7 +193,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("SBS")
             .pattern("SFS")
             .define('S', Items.STONE_BRICKS)
-            .define('P', ExtremeMetalsAddItems.IRON_PLATE.get())
+            .define('P', Ingredient.of(ironPlateTag))
             .define('B', Items.BLAST_FURNACE)
             .define('F', Items.FURNACE)
             .unlockedBy("has_iron", has(Items.IRON_INGOT))
@@ -174,7 +205,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("BPB")
             .pattern("PFP")
             .define('S', Items.STONE_BRICKS)
-            .define('P', ExtremeMetalsAddItems.IRON_PLATE.get())
+            .define('P', Ingredient.of(ironPlateTag))
             .define('B', Items.BLAST_FURNACE)
             .define('F', Items.FURNACE)
             .unlockedBy("has_iron", has(Items.IRON_INGOT))
@@ -186,12 +217,25 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("PGI")
             .pattern("PGB")
             .pattern("BBB")
-            .define('I', ExtremeMetalsAddItems.IRON_ROD.get())
+            .define('I', Ingredient.of(ironRodTag))
             .define('P', ExtremeMetalsAddItems.STEAM_POWER_UNIT.get())
-            .define('B', ExtremeMetalsAddItems.BRONZE_PLATE.get())
-            .define('G', ExtremeMetalsAddItems.BRASS_GEAR.get())
+            .define('B', Ingredient.of(bronzePlateTag))
+            .define('G', Ingredient.of(brassGearTag))
             .unlockedBy("has_steam_power_unit", has(ExtremeMetalsAddItems.STEAM_POWER_UNIT.get()))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/steam/rolling_mill")
+        );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ExtremeMetalsAddBlocks.BlockItems.STEAM_LATHE.get(),1) // 完成品
+            .pattern("BBB")
+            .pattern("PGI")
+            .pattern("PGS")
+            .define('I', Ingredient.of(ironRodTag))
+            .define('P', ExtremeMetalsAddItems.STEAM_POWER_UNIT.get())
+            .define('B', Ingredient.of(bronzePlateTag))
+            .define('G', Ingredient.of(brassGearTag))
+            .define('S', Items.GRINDSTONE)
+            .unlockedBy("has_steam_power_unit", has(ExtremeMetalsAddItems.STEAM_POWER_UNIT.get()))
+            .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/steam/lathe")
         );
 
         // shaped crafting (weight and mold)
@@ -199,8 +243,8 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("   ")
             .pattern(" I ")
             .pattern("IBI")
-            .define('B', Items.GOLD_BLOCK)
-            .define('I', Items.IRON_INGOT)
+            .define('B', Ingredient.of(Tags.Items.STORAGE_BLOCKS_GOLD))
+            .define('I', Ingredient.of(Tags.Items.INGOTS_IRON))
             .unlockedBy("has_iron", has(Items.IRON_INGOT))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/weight")
         );
@@ -209,7 +253,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("BBB")
             .pattern("B B")
             .pattern("BBB")
-            .define('B', Items.BRICKS)
+            .define('B', Ingredient.of(Tags.Items.INGOTS_BRICK))
             .unlockedBy("has_bricks", has(Items.BRICKS))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/disposable_plate_mold")
         );
@@ -218,7 +262,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("BPB")
             .pattern("PPP")
             .pattern("BPB")
-            .define('B', Items.BRICKS)
+            .define('B', Ingredient.of(Tags.Items.INGOTS_BRICK))
             .define('P', ExtremeMetalsAddItems.DISPOSABLE_PLATE_MOLD.get())
             .unlockedBy("has_bricks", has(Items.BRICKS))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/disposable_turbine_blades_mold")
@@ -228,7 +272,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("B B")
             .pattern("BBB")
             .pattern("BBB")
-            .define('B', Items.BRICKS)
+            .define('B', Ingredient.of(Tags.Items.INGOTS_BRICK))
             .unlockedBy("has_bricks", has(Items.BRICKS))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/disposable_rod_mold")
         );
@@ -237,7 +281,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("BBB")
             .pattern("BPB")
             .pattern("BBB")
-            .define('B', Items.BRICKS)
+            .define('B', Ingredient.of(Tags.Items.INGOTS_BRICK))
             .define('P', ExtremeMetalsAddItems.DISPOSABLE_PLATE_MOLD.get())
             .unlockedBy("has_bricks", has(Items.BRICKS))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/disposable_gear_mold")
@@ -248,17 +292,17 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .pattern("PTP")
             .pattern("PRP")
             .pattern("PTP")
-            .define('T', ExtremeMetalsAddItems.BRASS_TURBINE_BLADES.get())
-            .define('P', ExtremeMetalsAddItems.BRONZE_PLATE.get())
-            .define('R', ExtremeMetalsAddItems.IRON_ROD.get())
+            .define('T', Ingredient.of(brassTurbine_bladesTag))
+            .define('P', Ingredient.of(bronzePlateTag))
+            .define('R', Ingredient.of(ironRodTag))
             .unlockedBy("has_bronze", has(ExtremeMetalsAddItems.BRONZE_INGOT.get()))
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "shaped/steam_power_unit")
         );
 
         // primitive alloyig machine
         RecipebuilderPrimitiveAlloyingMachine.create(
-                Ingredient.of(Items.COPPER_INGOT), 3,
-                Ingredient.of(ExtremeMetalsAddItems.TIN_INGOT.get()), 1,
+                Ingredient.of(Tags.Items.INGOTS_COPPER), 3,
+                Ingredient.of(tinIngotTag), 1,
                 ExtremeMetalsAddItems.BRONZE_INGOT.get(), 4
             )
             .unlockedBy("has_tin", has(ExtremeMetalsAddItems.TIN_INGOT.get()))
@@ -266,8 +310,8 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
         );
 
         RecipebuilderPrimitiveAlloyingMachine.create(
-                Ingredient.of(Items.COPPER_INGOT), 2,
-                Ingredient.of(ExtremeMetalsAddItems.ZINC_INGOT.get()), 1,
+                Ingredient.of(Tags.Items.INGOTS_COPPER), 2,
+                Ingredient.of(zincIngotTag), 1,
                 ExtremeMetalsAddItems.BRASS_INGOT.get(), 3
             )
             .unlockedBy("has_zinc", has(ExtremeMetalsAddItems.ZINC_INGOT.get()))
@@ -276,7 +320,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
 
         // steam rolling mill
         RecipebuilderSteamRollingMill.create(
-            Ingredient.of(ExtremeMetalsAddItems.BRONZE_INGOT.get()),
+            Ingredient.of(bronzeIngotTag),
             ExtremeMetalsAddItems.BRONZE_PLATE.get(),
             1
         )
@@ -285,7 +329,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
         );
 
         RecipebuilderSteamRollingMill.create(
-            Ingredient.of(ExtremeMetalsAddItems.BRASS_INGOT.get()),
+            Ingredient.of(brassIngotTag),
             ExtremeMetalsAddItems.BRASS_PLATE.get(),
             1
         )
@@ -294,7 +338,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
         );
 
         RecipebuilderSteamRollingMill.create(
-            Ingredient.of(Items.IRON_INGOT),
+            Ingredient.of(Tags.Items.INGOTS_IRON),
             ExtremeMetalsAddItems.IRON_PLATE.get(),
             1
         )
@@ -304,7 +348,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
 
         //steam lathe
         RecipebuilderSteamLathe.create(
-            Ingredient.of(Items.IRON_INGOT),
+            Ingredient.of(Tags.Items.INGOTS_IRON),
             ExtremeMetalsAddItems.IRON_ROD.get(),
             1
         )
@@ -315,7 +359,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
         //smithing
         SmithingTransformRecipeBuilder.smithing(
             Ingredient.of(ExtremeMetalsAddItems.DISPOSABLE_PLATE_MOLD.get()),
-            Ingredient.of(Items.IRON_INGOT),
+            Ingredient.of(Tags.Items.INGOTS_IRON),
             Ingredient.of(ExtremeMetalsAddItems.WEIGHT.get()),
             RecipeCategory.MISC,
             ExtremeMetalsAddItems.IRON_PLATE.get()
@@ -326,7 +370,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
 
         SmithingTransformRecipeBuilder.smithing(
             Ingredient.of(ExtremeMetalsAddItems.DISPOSABLE_PLATE_MOLD.get()),
-            Ingredient.of(ExtremeMetalsAddItems.BRONZE_INGOT.get()),
+            Ingredient.of(bronzeIngotTag),
             Ingredient.of(ExtremeMetalsAddItems.WEIGHT.get()),
             RecipeCategory.MISC,
             ExtremeMetalsAddItems.BRONZE_PLATE.get()
@@ -337,7 +381,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
 
         SmithingTransformRecipeBuilder.smithing(
             Ingredient.of(ExtremeMetalsAddItems.DISPOSABLE_PLATE_MOLD.get()),
-            Ingredient.of(ExtremeMetalsAddItems.BRASS_INGOT.get()),
+            Ingredient.of(brassIngotTag),
             Ingredient.of(ExtremeMetalsAddItems.WEIGHT.get()),
             RecipeCategory.MISC,
             ExtremeMetalsAddItems.BRASS_PLATE.get()
@@ -359,7 +403,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
 
         SmithingTransformRecipeBuilder.smithing(
             Ingredient.of(ExtremeMetalsAddItems.DISPOSABLE_ROD_MOLD.get()),
-            Ingredient.of(Items.IRON_INGOT),
+            Ingredient.of(Tags.Items.INGOTS_IRON),
             Ingredient.of(ExtremeMetalsAddItems.WEIGHT.get()),
             RecipeCategory.MISC,
             ExtremeMetalsAddItems.IRON_ROD.get()
@@ -370,7 +414,7 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
 
         SmithingTransformRecipeBuilder.smithing(
             Ingredient.of(ExtremeMetalsAddItems.DISPOSABLE_GEAR_MOLD.get()),
-            Ingredient.of(ExtremeMetalsAddItems.BRASS_PLATE.get()),
+            Ingredient.of(brassPlateTag),
             Ingredient.of(ExtremeMetalsAddItems.WEIGHT.get()),
             RecipeCategory.MISC,
             ExtremeMetalsAddItems.BRASS_GEAR.get()
