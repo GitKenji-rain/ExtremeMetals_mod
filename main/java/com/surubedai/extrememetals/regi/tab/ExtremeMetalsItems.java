@@ -20,6 +20,7 @@ public class ExtremeMetalsItems {
 
             ExtremeMetalsAddItems.BRONZE_INGOT.get(),
             ExtremeMetalsAddItems.BRASS_INGOT.get(),
+            ExtremeMetalsAddItems.PIG_IRON_INGOT.get(),
 
             ExtremeMetalsAddItems.IRON_PLATE.get(),
             ExtremeMetalsAddItems.BRONZE_PLATE.get(),

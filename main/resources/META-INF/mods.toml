@@ -4,7 +4,7 @@ license='MIT'
 
 [[mods]]
 modId="extrememetals"
-version="1.30.62-legacy"
+version="0.1.6-b"
 displayName="Extreme Metals"
 authors="Surubedai"
 description='''add some metals and machines'''

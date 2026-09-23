@@ -318,6 +318,15 @@ public class ExtremeMetalsRecipeProvider extends RecipeProvider {
             .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "alloying/primitive/brass")
         );
 
+        RecipebuilderPrimitiveAlloyingMachine.create(
+                Ingredient.of(Tags.Items.RAW_MATERIALS_IRON), 3,
+                Ingredient.of(Items.COAL), 1,
+                ExtremeMetalsAddItems.PIG_IRON_INGOT.get(), 3
+            )
+            .unlockedBy("has_raw_iron", has(Items.RAW_IRON))
+            .save(consumer, new ResourceLocation(ExtremeMetalsMain.MODID, "alloying/primitive/pig_iron")
+        );
+
         // steam rolling mill
         RecipebuilderSteamRollingMill.create(
             Ingredient.of(bronzeIngotTag),
