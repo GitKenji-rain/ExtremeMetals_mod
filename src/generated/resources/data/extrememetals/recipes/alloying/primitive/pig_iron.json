@@ -1,0 +1,21 @@
+{
+  "type": "extrememetals:primitive_alloying",
+  "ingredients": [
+    {
+      "count": 3,
+      "ingredient": {
+        "tag": "forge:raw_materials/iron"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "minecraft:coal"
+      }
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "extrememetals:pig_iron_ingot"
+  }
+}

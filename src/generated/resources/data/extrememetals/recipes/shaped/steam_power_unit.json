@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "forge:plates/bronze"
+    },
+    "R": {
+      "tag": "forge:rods/iron"
+    },
+    "T": {
+      "tag": "forge:turbine_blades/brass"
+    }
+  },
+  "pattern": [
+    "PTP",
+    "PRP",
+    "PTP"
+  ],
+  "result": {
+    "item": "extrememetals:steam_power_unit"
+  },
+  "show_notification": true
+}

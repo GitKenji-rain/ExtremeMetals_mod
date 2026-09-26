@@ -1,0 +1,10 @@
+{
+  "type": "extrememetals:primitive_reduction",
+  "ingredient": {
+    "item": "extrememetals:cassiterite_coal_mixture"
+  },
+  "output": {
+    "count": 8,
+    "item": "extrememetals:tin_ingot"
+  }
+}

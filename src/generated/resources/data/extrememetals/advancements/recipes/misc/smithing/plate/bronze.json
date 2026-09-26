@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plate_mold": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrememetals:disposable_plate_mold"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrememetals:smithing/plate/bronze"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_plate_mold",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrememetals:smithing/plate/bronze"
+    ]
+  },
+  "sends_telemetry_event": false
+}

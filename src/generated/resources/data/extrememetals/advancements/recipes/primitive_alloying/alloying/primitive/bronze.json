@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "has_tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrememetals:tin_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

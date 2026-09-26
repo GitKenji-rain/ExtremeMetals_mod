@@ -1,0 +1,10 @@
+{
+  "type": "extrememetals:primitive_reduction",
+  "ingredient": {
+    "item": "extrememetals:native_silver_coal_mixture"
+  },
+  "output": {
+    "count": 8,
+    "item": "extrememetals:silver_ingot"
+  }
+}

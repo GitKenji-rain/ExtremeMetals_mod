@@ -1,0 +1,10 @@
+{
+  "type": "extrememetals:primitive_reduction",
+  "ingredient": {
+    "item": "extrememetals:zinc_oxide_coal_mixture"
+  },
+  "output": {
+    "count": 8,
+    "item": "extrememetals:zinc_ingot"
+  }
+}

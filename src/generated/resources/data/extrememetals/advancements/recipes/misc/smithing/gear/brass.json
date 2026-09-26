@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gear_mold": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrememetals:disposable_gear_mold"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrememetals:smithing/gear/brass"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_gear_mold",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrememetals:smithing/gear/brass"
+    ]
+  },
+  "sends_telemetry_event": false
+}

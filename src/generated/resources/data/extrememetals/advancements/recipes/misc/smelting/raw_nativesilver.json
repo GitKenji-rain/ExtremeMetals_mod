@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_nativesilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrememetals:raw_native_silver"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrememetals:smelting/raw_nativesilver"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_nativesilver",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrememetals:smelting/raw_nativesilver"
+    ]
+  },
+  "sends_telemetry_event": false
+}

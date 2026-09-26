@@ -1,0 +1,9 @@
+{
+  "type": "extrememetals:steam_lathe",
+  "ingredient": {
+    "tag": "forge:ingots/iron"
+  },
+  "output": {
+    "item": "extrememetals:iron_rod"
+  }
+}

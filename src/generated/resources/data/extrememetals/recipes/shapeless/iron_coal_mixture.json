@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "tag": "forge:raw_materials/iron"
+    },
+    {
+      "tag": "forge:raw_materials/iron"
+    },
+    {
+      "tag": "forge:raw_materials/iron"
+    },
+    {
+      "tag": "forge:raw_materials/iron"
+    },
+    {
+      "tag": "forge:raw_materials/iron"
+    },
+    {
+      "tag": "forge:raw_materials/iron"
+    },
+    {
+      "tag": "forge:raw_materials/iron"
+    },
+    {
+      "tag": "forge:raw_materials/iron"
+    }
+  ],
+  "result": {
+    "item": "extrememetals:iron_coal_mixture"
+  }
+}

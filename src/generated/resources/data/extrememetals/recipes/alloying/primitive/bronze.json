@@ -1,0 +1,21 @@
+{
+  "type": "extrememetals:primitive_alloying",
+  "ingredients": [
+    {
+      "count": 3,
+      "ingredient": {
+        "tag": "forge:ingots/copper"
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "tag": "forge:ingots/tin"
+      }
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "extrememetals:bronze_ingot"
+  }
+}

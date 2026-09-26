@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "forge:plates/bronze"
+    },
+    "G": {
+      "tag": "forge:gears/brass"
+    },
+    "I": {
+      "tag": "forge:rods/iron"
+    },
+    "P": {
+      "item": "extrememetals:steam_power_unit"
+    }
+  },
+  "pattern": [
+    "PGI",
+    "PGB",
+    "BBB"
+  ],
+  "result": {
+    "item": "extrememetals:steam_rolling_mill"
+  },
+  "show_notification": true
+}

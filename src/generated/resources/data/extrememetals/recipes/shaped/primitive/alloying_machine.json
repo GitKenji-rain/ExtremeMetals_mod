@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blast_furnace"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "P": {
+      "tag": "forge:plates/iron"
+    },
+    "S": {
+      "item": "minecraft:stone_bricks"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "BPB",
+    "PFP"
+  ],
+  "result": {
+    "item": "extrememetals:primitive_alloying_machine"
+  },
+  "show_notification": true
+}

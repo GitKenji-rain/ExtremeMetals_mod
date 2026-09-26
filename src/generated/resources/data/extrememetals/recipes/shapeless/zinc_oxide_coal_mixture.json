@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "extrememetals:zinc_oxide"
+    },
+    {
+      "item": "extrememetals:zinc_oxide"
+    },
+    {
+      "item": "extrememetals:zinc_oxide"
+    },
+    {
+      "item": "extrememetals:zinc_oxide"
+    },
+    {
+      "item": "extrememetals:zinc_oxide"
+    },
+    {
+      "item": "extrememetals:zinc_oxide"
+    },
+    {
+      "item": "extrememetals:zinc_oxide"
+    },
+    {
+      "item": "extrememetals:zinc_oxide"
+    }
+  ],
+  "result": {
+    "item": "extrememetals:zinc_oxide_coal_mixture"
+  }
+}

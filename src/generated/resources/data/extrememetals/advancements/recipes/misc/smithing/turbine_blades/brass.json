@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrememetals:smithing/turbine_blades/brass"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_turbine_blades_mold": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrememetals:disposable_turbine_blades_mold"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_turbine_blades_mold",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrememetals:smithing/turbine_blades/brass"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,9 @@
+{
+  "type": "extrememetals:steam_rolling",
+  "ingredient": {
+    "tag": "forge:ingots/brass"
+  },
+  "output": {
+    "item": "extrememetals:brass_plate"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "extrememetals:steam_rolling",
+  "ingredient": {
+    "tag": "forge:ingots/bronze"
+  },
+  "output": {
+    "item": "extrememetals:bronze_plate"
+  }
+}

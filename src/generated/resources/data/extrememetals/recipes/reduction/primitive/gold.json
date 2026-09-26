@@ -1,0 +1,10 @@
+{
+  "type": "extrememetals:primitive_reduction",
+  "ingredient": {
+    "item": "extrememetals:gold_coal_mixture"
+  },
+  "output": {
+    "count": 8,
+    "item": "minecraft:gold_ingot"
+  }
+}

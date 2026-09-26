@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "forge:plates/bronze"
+    },
+    "G": {
+      "tag": "forge:gears/brass"
+    },
+    "I": {
+      "tag": "forge:rods/iron"
+    },
+    "P": {
+      "item": "extrememetals:steam_power_unit"
+    },
+    "S": {
+      "item": "minecraft:grindstone"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "PGI",
+    "PGS"
+  ],
+  "result": {
+    "item": "extrememetals:steam_lathe"
+  },
+  "show_notification": true
+}

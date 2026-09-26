@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "extrememetals:weight"
+  },
+  "base": {
+    "tag": "forge:ingots/brass"
+  },
+  "result": {
+    "item": "extrememetals:brass_plate"
+  },
+  "template": {
+    "item": "extrememetals:disposable_plate_mold"
+  }
+}

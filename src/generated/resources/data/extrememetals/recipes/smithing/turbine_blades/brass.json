@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "extrememetals:weight"
+  },
+  "base": {
+    "item": "extrememetals:unshaped_brass_turbine_blades"
+  },
+  "result": {
+    "item": "extrememetals:brass_turbine_blades"
+  },
+  "template": {
+    "item": "extrememetals:disposable_turbine_blades_mold"
+  }
+}

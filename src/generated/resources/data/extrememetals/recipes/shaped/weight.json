@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "forge:storage_blocks/gold"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "pattern": [
+    "   ",
+    " I ",
+    "IBI"
+  ],
+  "result": {
+    "count": 4,
+    "item": "extrememetals:weight"
+  },
+  "show_notification": true
+}

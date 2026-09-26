@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_cassiterite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrememetals:raw_cassiterite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrememetals:reduction/primitive/cassiterite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_cassiterite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrememetals:reduction/primitive/cassiterite"
+    ]
+  },
+  "sends_telemetry_event": true
+}

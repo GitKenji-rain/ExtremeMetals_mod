@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "tag": "forge:raw_materials/native_silver"
+    },
+    {
+      "tag": "forge:raw_materials/native_silver"
+    },
+    {
+      "tag": "forge:raw_materials/native_silver"
+    },
+    {
+      "tag": "forge:raw_materials/native_silver"
+    },
+    {
+      "tag": "forge:raw_materials/native_silver"
+    },
+    {
+      "tag": "forge:raw_materials/native_silver"
+    },
+    {
+      "tag": "forge:raw_materials/native_silver"
+    },
+    {
+      "tag": "forge:raw_materials/native_silver"
+    }
+  ],
+  "result": {
+    "item": "extrememetals:native_silver_coal_mixture"
+  }
+}

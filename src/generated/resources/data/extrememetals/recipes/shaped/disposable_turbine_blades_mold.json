@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "forge:ingots/brick"
+    },
+    "P": {
+      "item": "extrememetals:disposable_plate_mold"
+    }
+  },
+  "pattern": [
+    "BPB",
+    "PPP",
+    "BPB"
+  ],
+  "result": {
+    "count": 4,
+    "item": "extrememetals:disposable_turbine_blades_mold"
+  },
+  "show_notification": true
+}

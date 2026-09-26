@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "tag": "forge:raw_materials/gold"
+    },
+    {
+      "tag": "forge:raw_materials/gold"
+    },
+    {
+      "tag": "forge:raw_materials/gold"
+    },
+    {
+      "tag": "forge:raw_materials/gold"
+    },
+    {
+      "tag": "forge:raw_materials/gold"
+    },
+    {
+      "tag": "forge:raw_materials/gold"
+    },
+    {
+      "tag": "forge:raw_materials/gold"
+    },
+    {
+      "tag": "forge:raw_materials/gold"
+    }
+  ],
+  "result": {
+    "item": "extrememetals:gold_coal_mixture"
+  }
+}

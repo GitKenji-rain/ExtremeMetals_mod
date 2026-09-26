@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_nativesilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrememetals:raw_native_silver"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrememetals:shapeless/nativesilver_coal_mixture"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_nativesilver",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrememetals:shapeless/nativesilver_coal_mixture"
+    ]
+  },
+  "sends_telemetry_event": false
+}

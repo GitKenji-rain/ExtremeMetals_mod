@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blast_furnace"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "P": {
+      "tag": "forge:plates/iron"
+    },
+    "S": {
+      "item": "minecraft:stone_bricks"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "SBS",
+    "SFS"
+  ],
+  "result": {
+    "item": "extrememetals:primitive_reduction_furnace"
+  },
+  "show_notification": true
+}
