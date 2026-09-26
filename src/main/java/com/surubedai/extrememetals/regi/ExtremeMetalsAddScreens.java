@@ -31,6 +31,9 @@ public class ExtremeMetalsAddScreens {
     public static final RegistryObject<MenuType<ScreenSteamLathe>> STEAM_LATHE_MENU =
             registerMenuType("steam_lathe_menu", ScreenSteamLathe::new);
 
+    public static final RegistryObject<MenuType<ScreenSteamAutomaticLoom>> STEAM_LOOM_MENU =
+            registerMenuType("steam_loom_menu", ScreenSteamAutomaticLoom::new);
+
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

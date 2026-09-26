@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 public class ScreenSteamLatheDrawing extends AbstractContainerScreen<ScreenSteamLathe> {
     // 💡 画面の背景に使用するテクスチャ画像のパス（後ほどバニラのかまどの画像を流用するか、自作画像を置きます）
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(ExtremeMetalsMain.MODID, "textures/gui/primitive_reduction_furnace.png");
+            new ResourceLocation(ExtremeMetalsMain.MODID, "textures/gui/steam_lathe.png");
 
     public ScreenSteamLatheDrawing(ScreenSteamLathe menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);

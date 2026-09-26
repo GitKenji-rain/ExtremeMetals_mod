@@ -89,6 +89,13 @@ public class ExtremeMetalsAddBlocks {
                         .sound(SoundType.BASALT)
                         .requiresCorrectToolForDrops()));
 
+        public static final RegistryObject<Block> STEAM_AUTOMATIC_LOOM = BLOCKS.register(
+                "steam_automatic_loom",
+                () -> new BlockSteamAutomaticLoom(BlockBehaviour.Properties.of()
+                        .strength(6.0F,3.0F)
+                        .sound(SoundType.BASALT)
+                        .requiresCorrectToolForDrops()));
+
     }
 
     public static class BlockItems {
@@ -158,6 +165,14 @@ public class ExtremeMetalsAddBlocks {
                 "steam_lathe",
                 () -> new BlockItem(
                         Blocks.STEAM_LATHE.get(),
+                        new Item.Properties()
+                )
+        );
+
+        public static final RegistryObject<Item> STEAM_AUTOMATIC_LOOM = BLOCK_ITEMS.register(
+                "steam_automatic_loom",
+                () -> new BlockItem(
+                        Blocks.STEAM_AUTOMATIC_LOOM.get(),
                         new Item.Properties()
                 )
         );

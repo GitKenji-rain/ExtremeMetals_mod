@@ -39,6 +39,11 @@ public class ExtremeMetalsAddBlockEntities {
                     BlockEntityType.Builder.of(BlockentitySteamLathe::new,
                             ExtremeMetalsAddBlocks.Blocks.STEAM_LATHE.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<BlockentitySteamAutomaticLoom>> STEAM_AUTOMATIC_LOOM =
+            BLOCK_ENTITIES.register("steam_automatic_loom", () ->
+                    BlockEntityType.Builder.of(BlockentitySteamAutomaticLoom::new,
+                            ExtremeMetalsAddBlocks.Blocks.STEAM_AUTOMATIC_LOOM.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

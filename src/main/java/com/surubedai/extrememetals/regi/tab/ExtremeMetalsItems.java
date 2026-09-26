@@ -58,6 +58,7 @@ public class ExtremeMetalsItems {
 
             ExtremeMetalsAddBlocks.BlockItems.STEAM_ROLLING_MILL.get(),
             ExtremeMetalsAddBlocks.BlockItems.STEAM_LATHE.get(),
+            ExtremeMetalsAddBlocks.BlockItems.STEAM_AUTOMATIC_LOOM.get(),
 
             ExtremeMetalsAddFluids.BucketItems.STEAM_BUCKET.get()
     }; //items

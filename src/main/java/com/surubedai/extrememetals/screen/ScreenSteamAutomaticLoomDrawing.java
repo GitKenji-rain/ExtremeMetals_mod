@@ -9,12 +9,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class ScreenSteamRollingMillDrawing extends AbstractContainerScreen<ScreenSteamRollingMill> {
+public class ScreenSteamAutomaticLoomDrawing extends AbstractContainerScreen<ScreenSteamAutomaticLoom> {
     // 💡 画面の背景に使用するテクスチャ画像のパス（後ほどバニラのかまどの画像を流用するか、自作画像を置きます）
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(ExtremeMetalsMain.MODID, "textures/gui/steam_rolling_mill.png");
+            new ResourceLocation(ExtremeMetalsMain.MODID, "textures/gui/steam_automatic_loom.png");
 
-    public ScreenSteamRollingMillDrawing(ScreenSteamRollingMill menu, Inventory playerInventory, Component title) {
+    public ScreenSteamAutomaticLoomDrawing(ScreenSteamAutomaticLoom menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
     }
 

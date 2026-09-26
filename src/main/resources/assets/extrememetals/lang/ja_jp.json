@@ -52,6 +52,7 @@
 
   "block.extrememetals.steam_rolling_mill": "蒸気式圧延機",
   "block.extrememetals.steam_lathe": "蒸気式旋盤",
+  "block.extrememetals.steam_automatic_loom": "蒸気式自動織機",
 
   "item.extrememetals.steam_bucket" : "蒸気 x 1000mb",
 
